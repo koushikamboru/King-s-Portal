@@ -1,6 +1,23 @@
 body
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #ECF7FF;
+    margin: 0px 167px 0px 167px ;
+}
+/*Header starts*/
+.promotion
+{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav
+{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 ul
 {
@@ -11,44 +28,30 @@ a
     text-decoration: none;
 }
 
-/* Dropdown container */
-.dropdown_d {
-    position: relative;
-    display: inline-block;
+#logo_img
+{
+    width: 80px;
+    height: 80px;
 }
+/*Header ends*/
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+/*footer starts*/
+footer
+{
+    margin-top: 72px;
+    background-color: #ffffff;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #ddd;
+.foot_info
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
-
-/* Show the dropdown menu on hover */
-.dropdown_d:hover .dropdown-content {
-    display: block;
+#foot_logo_info
+{
+    width: 303.45px;
+    height: 36px;
 }
-
-/* Style the dropdown toggle button */
-.dropdown-toggle {
-    padding: 12px 16px;
-    text-decoration: none;
-    color: black;
-    display: block;
-}
+/*footer ends*/
