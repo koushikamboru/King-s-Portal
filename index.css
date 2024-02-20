@@ -54,4 +54,26 @@ footer
     width: 303.45px;
     height: 36px;
 }
+
+.foot_references
+{
+    display: flex;
+    justify-content:space-evenly;
+}
+.footer_contact
+{
+    padding-bottom: 32px;
+}
+.fc_email,.fc_phno
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+.fc_info_con
+{
+    padding-left: 16px;
+}
+
+
 /*footer ends*/
