@@ -74,6 +74,9 @@ footer
 {
     padding-left: 16px;
 }
-
+#foot_copyright
+{
+    text-align: center;
+}
 
 /*footer ends*/
