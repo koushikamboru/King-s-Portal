@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Overview</title>
+    <style>
+        .overview {
+            text-align: center;
+        }
+
+        .over_head {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .mission, .vision, .values {
+            cursor: pointer;
+        }
+
+        .over_head .active h1 {
+            color: blue; /* You can adjust the styling as needed */
+        }
+
+        .info-section {
+            display: none;
+        }
+
+        .active-section {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overview">
+    <div id="mission-section" class="info-section active-section">
+        <h2>What we are</h2>
+        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+    </div>
+
+    <div id="vision-section" class="info-section">
+        <h2>VISION Information</h2>
+        <h2>What we are</h2>
+        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+        <!-- Add your vision information here -->
+    </div>
+
+    <div id="values-section" class="info-section">
+        <h2>VALUES Information</h2>
+        <h2>What we are</h2>
+        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+        <!-- Add your values information here -->
+    </div>
+    <div class="over_head">
+        <div class="mission active" id="mission" onclick="showSection('mission')">
+            <img src="./images/icon/Circle Avatar.jpg" id="as1">
+            <h1>MISSION</h1>
+        </div>
+        <div class="vision" id="vision" onclick="showSection('vision')">
+            <img src="./images/icon/Circle Avatar.jpg" id="as1">
+            <h1>VISION</h1>
+        </div>
+        <div class="values" id="values" onclick="showSection('values')">
+            <img src="./images/icon/Circle Avatar.jpg" id="as1">
+            <h1>VALUES</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showSection(section) {
+        // Hide all sections
+        document.querySelectorAll('.info-section').forEach(function (el) {
+            el.classList.remove('active-section');
+        });
+
+        // Show the selected section
+        document.getElementById(section + '-section').classList.add('active-section');
+
+        // Mark the clicked section as active in the header
+        document.querySelectorAll('.over_head > div').forEach(function (el) {
+            el.classList.remove('active');
+        });
+        document.getElementById(section).classList.add('active');
+    }
+</script>
+
+</body>
+</html>

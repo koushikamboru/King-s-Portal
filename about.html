@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="CSS/about.css">
     <link rel="icon" type="image/x-icon" href="./images/buss card match.png">
     <title>King's Portal</title>
 </head>
@@ -15,7 +15,10 @@
         </div>
     </header>
     <nav>
-        <a href=""><img src="./images/buss card match.png" id="logo_img"></a>
+        <div class="logo">
+            <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+            <a href=""><h1 id="logo_name">KING'S PORTAL</h1></a>
+        </div>
         <div class="nav_pages">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,11 +30,42 @@
         </div>          
         <div class="nav_user">
             <button>Login</button>
-            <button>Signup</button>
         </div>
         
     </nav>
     
+    <div class="overview">
+        <div id="mission-section" class="info-section active-section">
+            <h2>What we are</h2>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+        </div>
+    
+        <div id="vision-section" class="info-section">
+            <h2>VISION Information</h2>
+            <h2>What we are</h2>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+            <!-- Add your vision information here -->
+        </div>
+    
+        <div id="values-section" class="info-section">
+            <h2>VALUES Information</h2>
+            <h2>What we are</h2>
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
+            <!-- Add your values information here -->
+        </div>
+        <div class="over_head">
+            <div class="mission" onclick="showSection('mission')">
+                <img src="./images/icon/Circle Avatar.jpg" id="as1"><h1>MISSION</h1>
+            </div>
+            <div class="vision" onclick="showSection('vision')">
+                <img src="./images/icon/Circle Avatar.jpg" id="as1"><h1>VISION</h1>
+            </div>
+            <div class="values"onclick="showSection('values')">
+                <img src="./images/icon/Circle Avatar.jpg" id="as1"><h1>VALUES</h1>
+            </div>
+            
+        </div>        
+    </div>
     
     
   
@@ -40,7 +74,7 @@
     <footer>
         <div class="foot_info">
             <div class="foot_logo">
-                <a href=""><img src="./images/buss card match.png" id="logo_img"></a>
+                <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
                 <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
             </div>
             <div>
@@ -80,8 +114,15 @@
                 <a href=""><p>Forum</p></a>
              </div>
 
-             <div class="footer_contact">
-                 <a href=""><h4>Contact</h4></a>
+             <div class="footer_cotact">
+                <a href=""><h4>Contact</h4></a>
+                <a href=""><p>Get In Touch</p></a>
+                <a href=""><p>Join Us</p></a>
+                <a href=""><p>Career Opportunities</p></a>
+                <a href=""><p>FAQ's</p></a>
+             </div>
+             <div class="footer_reach">
+                 <a href=""><h4>Reach Us</h4></a>
                  <div class="fc_email">
                      <img src="./images/icon/email_Icon.jpg" alt="">
                      <div class="fc_info_con">
@@ -102,5 +143,6 @@
         <hr>
         <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
     </footer>
+    <script src="./JS/about.js"></script>
 </body>
 </html>
