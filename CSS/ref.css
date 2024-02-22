@@ -3,24 +3,22 @@ body
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: medium;
-    background-color: #112537;
-    color: rgb(255, 255, 255);
+    background-color: #ecf7ff00;
+    color: black;
     margin: 0%;
 }
 a
 {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 /*Header starts*/
-.promotion, .promotion a
+.promotion
 {
-    background-color: #e1f3fc;  
+    background-color: #58585838;   
     display: flex;
     align-items: center;
-    justify-content: space-around;   
-    color:#92cceb; 
-    font-style: bold;
+    justify-content: space-around;    
 }
 /*Header ends*/
 
@@ -28,20 +26,11 @@ a
 /*Naviagtion Start*/
 nav
 {
-    background-color: #7cacf8;
-}
-.bg_nav
-{
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content:space-between;
     margin: 0px 167px 0px 167px ;
-    color: black;
-}
-nav a
-{
-    color: black;
-    font-weight:600;
 }
 
 ul
@@ -74,11 +63,14 @@ ul li {
     display: flex;
     align-items: center;
 }
-.nav_user img
-{
-    border-radius: 50%;
+.nav_user {
+    display: flex;
+    align-items: center;
 }
 
+.nav_user button {
+    margin: 0px 25px 0px 0px; 
+}
 
 /*Naviagtion ends*/
 
@@ -87,10 +79,8 @@ ul li {
 footer
 {
     margin-top: 72px;
-    background-color: #1b3a57;
+    background-color: #ffffff;
     margin: 0px 167px 0px 167px ;
-    border-radius: 24px;
-    padding: 25px;
 }
 .foot_info
 {
