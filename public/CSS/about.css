@@ -1,0 +1,270 @@
+
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    background-color: #112537;
+    color: rgb(255, 255, 255);
+    margin: 0%;
+}
+a
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+/*Header starts*/
+.promotion
+{
+    background-color: #e1f3fc28;   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    color:#ffffff; 
+    font-style: bold;  
+}
+.promotion a
+{
+    color: #92cceb;  
+}
+.promotion a:hover
+{
+    color: #ffffff;  
+}
+/*Header ends*/
+
+
+/*Naviagtion Start*/
+nav
+{
+    background-color: #7cacf8;
+}
+.bg_nav
+{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 0px 167px 0px 167px ;
+    color: black;
+}
+nav a
+{
+    color: black;
+    font-weight:600;
+}
+nav a:hover
+{
+    color: rgb(255, 255, 255);
+    font-weight:600;
+}
+ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+ul li {
+    margin: 0 14px; 
+}
+
+#logo_img
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+ 
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+#logo_name
+{
+    font-size: 34px;
+}
+#king
+{
+    margin-left: 6px;
+    color: white;
+}
+#portal
+{
+    color: #003399;
+}
+.nav_pages
+{
+    display: flex;
+    align-items: center;
+}#login_btn
+{
+    width: 74px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: white;
+    color: #00a6ff;
+    border: none;
+    margin: 5px;
+}
+#signup_btn
+{
+    width: 74px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #30abee;
+    color: white;
+    border: none;
+    margin: 5px;
+}
+#login_btn:hover
+{
+    background-color: #30abee;
+    color: white;
+}
+   
+#signup_btn:hover
+{
+    background-color: white;
+    color: #00a6ff;
+}
+
+/*Naviagtion ends*/
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/* About Us css start*/
+
+/**/
+.overview
+{
+    background-color: rgba(245, 245, 220, 0.397);
+    margin: 0px 167px 0px 167px ;
+    text-align: center;
+}
+.over_head
+{
+    display: flex;
+    justify-content: space-around;
+}
+#as1
+{
+    width: 48px;
+    height: 48px;
+}
+
+
+.mission, .vision, .values {
+    cursor: pointer;
+}
+
+.info-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
+}
+/**/
+
+/*About Us css ends*/
+
+
+/*-------------------------------------------------------------------------*/
+
+
+
+/*footer starts*/
+footer
+{
+    margin-top: 72px;
+    background-color: #1b3a57;
+    margin: 0px 167px 0px 167px ;
+    border-radius: 24px;
+    padding: 25px;
+}
+.foot_info
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#foot_logo_info
+{
+    width: 303.45px;
+    height: 36px;
+}
+
+.foot_subscribe_title {
+    width: 421px;
+    height: 78px;
+}
+
+.subscribe_input {
+    position: relative;
+    width: 421px;
+    height: 49px;
+    background-color: rgba(124, 172, 248, .08);
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+#subscribe_input_placeholder {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: calc(100% - 83px); 
+    height: 49px;
+    padding-right: 90px; 
+}
+
+.btn_subscribe {
+    position: absolute;
+    width: 83px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black; 
+    cursor: pointer;
+    margin: 10px; 
+}
+.btn_subscribe:hover
+{
+   background-color: #92cceb;
+   color: white;
+}
+.foot_references
+{
+    display: flex;
+    justify-content:space-between;
+}
+.footer_reach
+{
+    padding-bottom: 32px;
+}
+.fc_email,.fc_phno
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+#fimg_icon
+{
+    border-radius: 6px;
+}
+.fc_info_con
+{
+    padding-left: 16px;
+}
+#foot_copyright
+{
+    text-align: center;
+}
+
+/*footer ends*/
