@@ -18,7 +18,7 @@
         <div class="bg_nav">
             <div class="logo">
                 <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
-                <a href=""><h1 id="logo_name"><span id="king">KING'S</span> <span id="portal">PORTAL</span></h1></a>
+                <a href=""><h1 id="logo_name"><span id="king"> KING'S </span><span id="portal">PORTAL</span></h1></a>
             </div>
             
             <div class="nav_pages">
@@ -31,30 +31,72 @@
                 </ul>    
             </div>          
             <div class="nav_user">
-                <img src="./images/icon/Circle Avatar.jpg" alt="">
-
+              <button id="login_btn">Login</button>
+              <button id="signup_btn">Sign up</button>
             </div>
         </div>
     </nav>
-    
-    
-    
-    <br>
+
+    <div class="hero">
+        <div class="hero_cont">
+            <div class="img _cont">
+                <div class="hero_img">
+                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="Image 1" id="hi_s">
+                    <div class="hero_info_cont">
+                        <h1 class="hic_head">Discover the key to grow your business 1</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+                    </div>
+                </div>
+                <div class="hero_img">
+                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9127.jpg" alt="Image 2" id="hi_s">
+                    <div class="hero_info_cont">
+                        <h1 class="hic_head">Discover the key to grow your business 2</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+                    </div>
+                </div>
+                <div class="hero_img">
+                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9128.jpg" alt="Image 3" id="hi_s">
+                    <div class="hero_info_cont">
+                        <h1 class="hic_head">Discover the key to grow your business 3</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+                    </div>
+                </div>
+                <div class="hero_img">
+                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9129.jpg" alt="Image 4" id="hi_s">
+                    <div class="hero_info_cont">
+                        <h1 class="hic_head">Discover the key to grow your business 4</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
     
     
     <footer>
         <div class="foot_info">
             <div class="foot_logo">
-                <a href="index.html"><img src="./images/logo_full.jpg" id="logo_img"></a>
+                <div class="logo">
+                    <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                    <a href=""><h1 id="logo_name"><span id="king"> KING'S PORTAL</span></h1></a>
+                </div>
                 <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
             </div>
-            <div>
+
+            <div class="foot_subscribe_title">
                 <h2>Subscribe to our newsletter</h2>
-                <div class="subscribe">
-                    <input type="email" placeholder="Enter your email address">
-                    <button>Subscribe</button>
+                <div class="subscribe_input">
+                    <input type="email" placeholder="Enter your email address" id="subscribe_input_placeholder">
+                    <button class="btn_subscribe">Subscribe</button>
                 </div>
             </div>
+           
         </div>
         
         
@@ -94,14 +136,14 @@
              <div class="footer_reach">
                  <a href=""><h4>Reach US</h4></a>
                  <div class="fc_email">
-                     <img src="./images/icon/email_Icon.jpg" alt="">
+                     <img src="./images/icon/email_Icon.jpg" alt="" id="fimg_icon">
                      <div class="fc_info_con">
                         <p>Email: <br><a href="">contact@gmail.com</a></p>
                      </div>
                      
                  </div>
                  <div class="fc_phno">
-                     <img src="./images/icon/Phone_icon.jpg" alt="">
+                     <img src="./images/icon/Phone_icon.jpg" alt="" id="fimg_icon">
                      <div class="fc_info_con">
                         <p>Phone: <br><a href="">(414) 687 - 5892</a></p>
                      </div>
@@ -113,5 +155,6 @@
         <hr>
         <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
     </footer>
+    <script src="./JS/index.js"></script>
 </body>
 </html>

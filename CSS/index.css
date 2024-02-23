@@ -6,21 +6,35 @@ body
     background-color: #112537;
     color: rgb(255, 255, 255);
     margin: 0%;
+    
 }
 a
 {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-/*Header starts*/
-.promotion, .promotion a
+a :hover
 {
-    background-color: #e1f3fc;  
+    color: #92cceb;
+}
+
+/*Header starts*/
+.promotion
+{
+    background-color: #e1f3fc28;  
     display: flex;
     align-items: center;
     justify-content: space-around;   
-    color:#92cceb; 
+    color:#ffffff; 
     font-style: bold;
+}
+.promotion a
+{
+    color: #92cceb;  
+}
+.promotion a:hover
+{
+    color: #ffffff;  
 }
 /*Header ends*/
 
@@ -34,7 +48,7 @@ nav
 {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-evenly;
     margin: 0px 167px 0px 167px ;
     color: black;
 }
@@ -43,7 +57,11 @@ nav a
     color: black;
     font-weight:600;
 }
-
+nav a:hover
+{
+    color: rgb(255, 255, 255);
+    font-weight:600;
+}
 ul
 {
     list-style: none;
@@ -69,20 +87,141 @@ ul li {
 {
     font-size: 34px;
 }
+#king
+{
+    margin-left: 6px;
+    color: white;
+}
+#portal
+{
+    color: #003399;
+}
 .nav_pages
 {
     display: flex;
     align-items: center;
 }
-.nav_user img
-{
-    border-radius: 50%;
-}
 
+#login_btn
+{
+    width: 74px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: white;
+    color: #00a6ff;
+    border: none;
+    margin: 5px;
+}
+#signup_btn
+{
+    width: 74px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #30abee;
+    color: white;
+    border: none;
+    margin: 5px;
+}
+#login_btn:hover
+{
+    background-color: #30abee;
+    color: white;
+}
+   
+#signup_btn:hover
+{
+    background-color: white;
+    color: #00a6ff;
+}
 
 /*Naviagtion ends*/
 
+/*--------------------------------------------------------------------------------------------*/
 
+/*Hero starts*/
+
+.hero
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;  
+    margin: 80px 167px 80px 167px ;
+    
+}
+.hero_cont
+{
+    display: flex;
+    position: relative;
+    width: 1105px;
+    height: 457px;
+    margin-bottom: 10px;
+}
+
+#hi_s
+{   
+    width: 824px;
+    height: 457px;
+    border-radius: 8px;
+}
+.hero_info_cont
+{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    color: white;
+    background-color: #1b3a57;
+    width: 563px;
+    height: 339px;
+    border-radius: 8px;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    
+}
+.hero_img .hero_info_cont {
+    visibility: visible;
+    opacity: 1;
+}
+.hic_head
+{
+    width: 467px;
+    height: 83px;
+    text-align: center;
+    font-size: 48px;
+}
+.slider-dots {
+    position: absolute;
+    bottom: -20px; /* Adjust this value to position the dots just below hero_cont */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+    
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active {
+    background-color: #000000;
+}
+/*Hero ends*/
+/**/
+/**/
+/**/
+/**/
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------*/
 /*footer starts*/
 footer
 {
@@ -105,6 +244,47 @@ footer
     height: 36px;
 }
 
+.foot_subscribe_title {
+    width: 421px;
+    height: 78px;
+}
+
+.subscribe_input {
+    position: relative;
+    width: 421px;
+    height: 49px;
+    background-color: rgba(124, 172, 248, .08);
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+}
+
+#subscribe_input_placeholder {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: calc(100% - 83px); 
+    height: 49px;
+    padding-right: 90px; 
+}
+
+.btn_subscribe {
+    position: absolute;
+    width: 83px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: black; 
+    cursor: pointer;
+    margin: 10px; 
+}
+.btn_subscribe:hover
+{
+   background-color: #92cceb;
+   color: white;
+}
 .foot_references
 {
     display: flex;
@@ -119,6 +299,10 @@ footer
     display: flex;
     align-items: center;
     padding-bottom: 32px;
+}
+#fimg_icon
+{
+    border-radius: 6px;
 }
 .fc_info_con
 {

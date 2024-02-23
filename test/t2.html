@@ -1,90 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Overview</title>
+    <title>Slider with Dots</title>
     <style>
-        .overview {
-            text-align: center;
-        }
-
-        .over_head {
+        .hero {
+            width: 100%;
+            height: 617px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            align-items: center;
+            justify-content: center;
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+        }
+        
+        .hero_cont {
+            display: flex;
+            position: relative;
+            width: 1105px;
+            height: 457px;
+            
         }
 
-        .mission, .vision, .values {
-            cursor: pointer;
-        }
-
-        .over_head .active h1 {
-            color: blue; /* You can adjust the styling as needed */
-        }
-
-        .info-section {
+        .hero_img {
             display: none;
+            width: 859px;
+            height: 457px;
+        }
+        .hero_img img
+        {
+            width: 824px;
+            height: 457px;
         }
 
-        .active-section {
-            display: block;
+        .hero_info_cont {
+           
+            position: absolute;
+            background-color: #1b3a57;
+            width: 563px;
+            height: 339px;
+            border-radius: 8px;
+            
+        }
+
+        .hic_head {
+            width: 467px;
+            height: 83px;
+            text-align: center;
+            font-size: 48px;
+            margin: 62px 48px 62px 48px ;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .active {
+            background-color: #000000;
         }
     </style>
 </head>
 <body>
 
-<div class="overview">
-    <div id="mission-section" class="info-section active-section">
-        <h2>What we are</h2>
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
-    </div>
-
-    <div id="vision-section" class="info-section">
-        <h2>VISION Information</h2>
-        <h2>What we are</h2>
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
-        <!-- Add your vision information here -->
-    </div>
-
-    <div id="values-section" class="info-section">
-        <h2>VALUES Information</h2>
-        <h2>What we are</h2>
-        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.”</p>
-        <!-- Add your values information here -->
-    </div>
-    <div class="over_head">
-        <div class="mission active" id="mission" onclick="showSection('mission')">
-            <img src="./images/icon/Circle Avatar.jpg" id="as1">
-            <h1>MISSION</h1>
+<div class="hero">
+    <div class="hero_cont">
+        <div class="hero_img">
+            <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="Image 1">
         </div>
-        <div class="vision" id="vision" onclick="showSection('vision')">
-            <img src="./images/icon/Circle Avatar.jpg" id="as1">
-            <h1>VISION</h1>
+        <div class="hero_img">
+            <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9127.jpg" alt="Image 2">
         </div>
-        <div class="values" id="values" onclick="showSection('values')">
-            <img src="./images/icon/Circle Avatar.jpg" id="as1">
-            <h1>VALUES</h1>
+        <div class="hero_img">
+            <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9128.jpg" alt="Image 3">
+        </div>
+        <div class="hero_img">
+            <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9129.jpg" alt="Image 4">
+        </div>
+        <div class="hero_info_cont">
+            <h1 class="hic_head">Discover the key to grow your business 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+        </div>
+        <div class="hero_info_cont">
+            <h1 class="hic_head">Discover the key to grow your business 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+        </div>
+        <div class="hero_info_cont">
+            <h1 class="hic_head">Discover the key to grow your business 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
+        </div>
+        <div class="hero_info_cont">
+            <h1 class="hic_head">Discover the key to grow your business 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elidolor mattis sit phasellus mollis sit aliquam sit nullam neques.</p>
         </div>
     </div>
+    <div class="slider-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div> 
 </div>
 
 <script>
-    function showSection(section) {
-        // Hide all sections
-        document.querySelectorAll('.info-section').forEach(function (el) {
-            el.classList.remove('active-section');
-        });
+    let slideIndex = 0;
+    showSlides();
 
-        // Show the selected section
-        document.getElementById(section + '-section').classList.add('active-section');
+    function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides();
+    }
 
-        // Mark the clicked section as active in the header
-        document.querySelectorAll('.over_head > div').forEach(function (el) {
-            el.classList.remove('active');
-        });
-        document.getElementById(section).classList.add('active');
+    function showSlides() {
+        const slides = document.querySelectorAll('.hero_img');
+        const infos = document.querySelectorAll('.hero_info_cont');
+        const dots = document.querySelectorAll('.dot');
+        
+        // Hide all slides, infos, and remove active class from dots
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+            infos[i].style.display = 'none';
+            dots[i].classList.remove('active');
+        }
+        
+        // Show current slide, info, and add active class to corresponding dot
+        slides[slideIndex].style.display = 'block';
+        infos[slideIndex].style.display = 'block';
+        dots[slideIndex].classList.add('active');
+        
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        setTimeout(showSlides, 6500); // Change slide every 6.5 seconds
     }
 </script>
 
