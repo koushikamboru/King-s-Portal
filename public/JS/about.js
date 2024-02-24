@@ -7,3 +7,4 @@ function showSection(section) {
     // Show the selected section
     document.getElementById(section + '-section').classList.add('active-section');
 }
+
