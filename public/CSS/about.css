@@ -143,8 +143,7 @@ ul li {
     background-color: rgba(245, 245, 220, 0.397);
     margin: 0px 167px 0px 167px ;
     text-align: center;
-    width: 1141px;
-    height: 342px;
+
  
 
 }
@@ -160,10 +159,16 @@ ul li {
     height: 48px;
 }
 
-
+img#as1 {
+    border-radius: 50%;
+}
 .mission, .vision, .values {
     cursor: pointer;
+   display: flex;
+   align-items: center;
+   padding: 10px;
 }
+
 
 .info-section {
     display: none;
@@ -174,7 +179,7 @@ ul li {
 }
 
 .slider-container {
-    width: 1140px;
+    width: 85%;
     margin: 20px auto;
   }
 
