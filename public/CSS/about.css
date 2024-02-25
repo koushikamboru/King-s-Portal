@@ -184,7 +184,7 @@ img#as1 {
   }
 
   .slider {
-    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 3px;
     border-radius: 16px;
