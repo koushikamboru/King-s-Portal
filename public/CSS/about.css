@@ -140,8 +140,10 @@ ul li {
 /**/
 .overview
 {
-    background-color: rgba(245, 245, 220, 0.397);
-    margin: 0px 167px 0px 167px ;
+    background-color: #1b3a57;
+    margin: 24px 167px 24px 167px ;
+    padding: 80px 80px 80px 80px;
+    border-radius: 24px;
     text-align: center;
 
  
