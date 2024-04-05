@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Apna Gaadi</title>
+</head>
+<body>
+
+    <header>
+       
+       
+        <div class="form-popup">
+            <span class="close-btn material-symbols-rounded">close</span>
+            <div class="form-box login">
+                <div class="form-details">
+                    <h2>Welcome Back</h2>
+                    <p>Please log in to stay connected with us.<br> Easy option to login with Google</p>
+                </div>
+                <div class="form-content">
+                    <h2>LOGIN</h2>
+                
+                      <div id="my-signin2"></div>
+                      <script>
+                        function onSuccess(googleUser) {
+                          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                        }
+                        function onFailure(error) {
+                          console.log(error);
+                        }
+                        function renderButton() {
+                          gapi.signin2.render('my-signin2', {
+                            'scope': 'profile email',
+                            'width': 350,
+                            'height': 50,
+                            'longtitle': true,
+                            'theme': 'dark',
+                            'onsuccess': onSuccess,
+                            'onfailure': onFailure
+                          });
+                        }
+                      </script>
+                    
+                      <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                    
+                    <div class="bottom-link">
+                      <br>
+                        Don't have an account?
+                        <a href="#" id="signup-link">Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box signup">
+                <div class="form-details">
+                    <h2>Create Account</h2>
+                    <p>To become a part of our community, please sign up using your <br>Google Account.</p>
+                </div>
+                <div class="form-content">
+                    <h2>SIGNUP</h2>
+                    <div id="my-signin2"></div>
+                    <script>
+                      function onSuccess(googleUser) {
+                        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                      }
+                      function onFailure(error) {
+                        console.log(error);
+                      }
+                      function renderButton() {
+                        gapi.signin2.render('my-signin2', {
+                          'scope': 'profile email',
+                          'width': 350,
+                          'height': 50,
+                          'longtitle': true,
+                          'theme': 'dark',
+                          'onsuccess': onSuccess,
+                          'onfailure': onFailure
+                        });
+                      }
+                    </script>
+                  
+                    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+                    <div class="bottom-link">
+                        Already have an account? 
+                        <a href="#" id="login-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+  <script>
+    var flkty = new Flickity('.carousel', {
+      wrapAround: true // Enable wrapAround option
+    });
+  </script>
+  <script src="login.js"></script>
+</body>
+</html>
