@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/head_foot.css">
+    <link rel="icon" type="image/x-icon" href="./images/buss card match.png">
+    <title>King's Portal</title>
+</head>
+<body>
+    <header>
+        <div class="promotion">
+            <p>Don't miss out on amazing deals! Join our newsletter to receive a 10% OFF code.</p>
+            <a href="">Get Started <span>&#8594;</span></a>
+        </div>
+    </header>
+    <nav>
+        <div class="bg_nav">
+            <div class="logo">
+                <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                <a href=""><h1 id="logo_name"><span id="king"> KING'S </span><span id="portal">PORTAL</span></h1></a>
+            </div>
+            
+            <div class="nav_pages">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="">Divisions</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>    
+            </div>          
+            <div class="nav_user">
+              <button id="login_btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <footer>
+        <div class="foot_info">
+            <div class="foot_logo">
+                <div class="logo">
+                    <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                    <a href=""><h1 id="logo_name"><span id="king"> KING'S PORTAL</span></h1></a>
+                </div>
+                <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
+            </div>
+
+            <div class="foot_subscribe_title">
+                <h2>Subscribe to our newsletter</h2>
+                <div class="subscribe_input">
+                    <input type="email" placeholder="Enter your email address" id="subscribe_input_placeholder">
+                    <button class="btn_subscribe">Subscribe</button>
+                </div>
+            </div>
+           
+        </div>
+        
+        
+        <hr>
+        <div class="foot_references">
+            <div class="footer_aboutus">
+                <a href="about.html"><h4>About Us</h4></a>
+                <a href=""><p>Mission</p></a>
+                <a href=""><p>Our team</p></a>
+                <a href=""><p>Portfolio</p></a>
+                <a href=""><p>Testimonials</p></a>
+                <a href=""><p>Privacy policy</p></a>
+             </div>
+             
+             <div class="footer_divisions">
+                <a href=""><h4>Divisions</h4></a>
+                <a href=""><p>Academy</p></a>
+                <a href=""><p>Career</p></a>
+                <a href=""><p>Tech</p></a>
+                <a href=""><p>Innovations</p></a>
+                <a href=""><p>Products</p></a>
+             </div>
+             
+             <div class="footer_community">
+                <a href=""><h4>Community</h4></a>
+                <a href=""><p>Events</p></a>
+                <a href=""><p>Blog</p></a>
+                <a href=""><p>Forum</p></a>
+             </div>
+             <div class="footer_cotact">
+                <a href=""><h4>Contact</h4></a>
+                <a href=""><p>Get In Touch</p></a>
+                <a href=""><p>Join Us</p></a>
+                <a href=""><p>Career Opportunities</p></a>
+                <a href=""><p>FAQ's</p></a>
+             </div>
+             <div class="footer_reach">
+                 <a href=""><h4>Reach US</h4></a>
+                 <div class="fc_email">
+                     <img src="./images/icon/email_Icon.jpg" alt="" id="fimg_icon">
+                     <div class="fc_info_con">
+                        <p>Email: <br><a href="">contact@gmail.com</a></p>
+                     </div>
+                     
+                 </div>
+                 <div class="fc_phno">
+                     <img src="./images/icon/Phone_icon.jpg" alt="" id="fimg_icon">
+                     <div class="fc_info_con">
+                        <p>Phone: <br><a href="">(414) 687 - 5892</a></p>
+                     </div>
+                    
+                 </div>
+             </div>
+        </div>
+        
+        <hr>
+        <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAaoHjRdvzRoRFSBKPp1ugdUsuqay8A4os",
+          authDomain: "king-s-portal-web.firebaseapp.com",
+          projectId: "king-s-portal-web",
+          storageBucket: "king-s-portal-web.appspot.com",
+          messagingSenderId: "882093763532",
+          appId: "1:882093763532:web:07a41c61528d1b126d8b69",
+          measurementId: "G-0KS31J6CFZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
