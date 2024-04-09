@@ -14,16 +14,21 @@ body{
   background: #7d2ae8;
   padding: 30px;
 }
-.container{
+.form_container{
   position: relative;
   max-width: 850px;
   width: 100%;
+  height: 425px;
   background: #fff;
-  padding: 40px 30px;
+  padding: 15px 35px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   perspective: 2700px;
 }
-.container .cover{
+
+/*--------------------------------------------
+           code of cover flip
+----------------------------------------------*/
+.form_container .cover {
   position: absolute;
   top: 0;
   left: 50%;
@@ -34,44 +39,22 @@ body{
   transform-origin: left;
   transform-style: preserve-3d;
 }
-.container #flip:checked ~ .cover{
-  transform: rotateY(-180deg);
-}
- .container .cover .front,
- .container .cover .back{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.cover .back{
+
+.form_container #flip:checked ~ .cover {
   transform: rotateY(180deg);
-  backface-visibility: hidden;
 }
-.container .cover::before,
-.container .cover::after{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #7d2ae8;
-  opacity: 0.5;
-  z-index: 12;
-}
-.container .cover::after{
-  opacity: 0.3;
+
+.form_container #flip:checked ~ .cover .front {
   transform: rotateY(180deg);
-  backface-visibility: hidden;
+  opacity: 0;
 }
-.container .cover img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
+
+.form_container #flip:checked ~ .cover .back {
+  transform: rotateY(180deg);
+  opacity: 1;
 }
-.container .cover .text{
+
+.form_container .cover .back_text {
   position: absolute;
   z-index: 130;
   height: 100%;
@@ -81,23 +64,94 @@ body{
   align-items: center;
   justify-content: center;
 }
-.cover .text .text-1,
-.cover .text .text-2{
+
+.cover .back_text .back_text-1,
+.cover .back_text .back_text-2 {
   font-size: 26px;
   font-weight: 600;
   color: #fff;
   text-align: center;
 }
-.cover .text .text-2{
+
+.cover .back_text .back_text-2 {
   font-size: 15px;
   font-weight: 500;
 }
-.container .forms{
+
+.form_container .cover .front,
+.form_container .cover .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover .back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.form_container .cover::before,
+.form_container .cover::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7c2ae8;
+  opacity: 0.5;
+  z-index: 12;
+}
+
+.form_container .cover::after {
+  opacity: 0.3;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+
+.form_container .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.form_container .cover .front_text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover .front_text .front_text-1,
+.cover .front_text .front_text-2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.cover .front_text .front_text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/*--------------------------------------------
+           end code of cover flip
+----------------------------------------------*/
+
+
+.form_container .forms{
   height: 100%;
   width: 100%;
   background: #fff;
 }
-.container .form-content{
+.form_container .form-content{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -125,12 +179,12 @@ body{
   width: 20px;
 }
 .forms .form-content .input-boxes{
-  margin-top: 30px;
+  margin-top: 16px;
 }
 .forms .form-content .input-box{
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 35px;
   width: 100%;
   margin: 10px 0;
   position: relative;
@@ -193,24 +247,48 @@ body{
   text-align: center;
   margin-top: 25px;
 }
-.container #flip{
+.form_container #flip{
   display: none;
 }
-@media (max-width: 730px) {
-  .container .cover{
-    display: none;
-  }
-  .form-content .login-form,
-  .form-content .signup-form{
-    width: 100%;
-  }
-  .form-content .signup-form{
-    display: none;
-  }
-  .container #flip:checked ~ .forms .signup-form{
-    display: block;
-  }
-  .container #flip:checked ~ .forms .login-form{
-    display: none;
-  }
+
+
+.button_google {
+  display:inline-block;
+  align-items: center; 
+  justify-content: flex-start; 
+  width: 100%;
+  position: relative;
+}
+
+.button_google input[type="button"] {
+  color: #fff;
+  background: #0b57d0; 
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  height: 35px;
+  width: 100%;
+
+}
+
+#google_icon {
+  width: 35px; 
+  height: 35px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2px;
+}
+.button_google input[type="button"]:hover {
+  background: #0a4db9; 
+  
+}
+
+.text_option
+{
+
+  text-align: center;
 }
