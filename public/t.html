@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/head_foot.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/buss card match.png">
+    <title>King's Portal</title>
+    <style>
+        /* CSS for form_container */
+        .form_container {
+            display: none; /* Initially hide the form */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            z-index: 9999;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="promotion">
+            <p>Don't miss out on amazing deals! Join our newsletter to receive a 10% OFF code.</p>
+            <a href="">Get Started <span>&#8594;</span></a>
+        </div>
+    </header>
+    <nav>
+        <div class="bg_nav">
+            <div class="logo">
+                <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                <a href=""><h1 id="logo_name"><span id="king"> KING'S </span><span id="portal">PORTAL</span></h1></a>
+            </div>
+            
+            <div class="nav_pages">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="">Divisions</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>    
+            </div>          
+            <div class="nav_user">
+              <button id="login_btn">Login</button>
+         
+              
+            </div>
+        </div>
+    </nav>
+
+    <div  class="form_container" id="form_container">
+        <span class="close-btn material-symbols-rounded " style="
+    z-index: 100;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: #878484;
+      cursor: pointer;
+" onclick="closeForm()">close</span>
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <img src="images/frontImg.jpg" alt="">
+            <div class="front_text">
+              <span class="front_text-1">Every connection is a story waiting to be continued.</span>
+              <span class="front_text-2">Let's reconnect and keep writing our adventure together.</span>
+            </div>
+          </div>
+          <div class="back">
+            <img class="backImg" src="images/backImg.jpg" alt="">
+            <div class="back_text">
+              <span class="back_text-1">Good friend is a new adventure <br> Complete miles of journey <br> with one step</span>
+              <span class="back_text-2">Let's get started</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="forms">
+          <div class="form-content">
+            <div class="login-form form">
+              <div class="title">Login</div>
+              <form action="#">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit">
+                  </div>
+                  <div class="text_option">Or</div>
+                  <div class="button_google">
+                    <img src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="" id="google_icon">
+                    <input type="button" value="Login with Google">
+                  </div>
+                  <div class="text sign-up-text">Don't have an account? <label for="flip">Sign up now</label></div>
+                  
+                </div>
+              </form>
+            </div>
+            <div class="signup-form form">
+              <div class="title">Signup</div>
+              <form action="#">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit">
+                  </div>
+                  <div class="text_option">Or</div>
+                  <div class="button_google">
+                    <img src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="" id="google_icon">
+                    <input type="button" value="Sign up with Google">
+                  </div>
+                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+               
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+        <div class="foot_info">
+            <div class="foot_logo">
+                <div class="logo">
+                    <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                    <a href=""><h1 id="logo_name"><span id="king"> KING'S PORTAL</span></h1></a>
+                </div>
+                <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
+            </div>
+
+            <div class="foot_subscribe_title">
+                <h2>Subscribe to our newsletter</h2>
+                <div class="subscribe_input">
+                    <input type="email" placeholder="Enter your email address" id="subscribe_input_placeholder">
+                    <button class="btn_subscribe">Subscribe</button>
+                </div>
+            </div>
+           
+        </div>
+        
+        
+        <hr>
+        <div class="foot_references">
+            <div class="footer_aboutus">
+                <a href="about.html"><h4>About Us</h4></a>
+                <a href=""><p>Mission</p></a>
+                <a href=""><p>Our team</p></a>
+                <a href=""><p>Portfolio</p></a>
+                <a href=""><p>Testimonials</p></a>
+                <a href=""><p>Privacy policy</p></a>
+             </div>
+             
+             <div class="footer_divisions">
+                <a href=""><h4>Divisions</h4></a>
+                <a href=""><p>Academy</p></a>
+                <a href=""><p>Career</p></a>
+                <a href=""><p>Tech</p></a>
+                <a href=""><p>Innovations</p></a>
+                <a href=""><p>Products</p></a>
+             </div>
+             
+             <div class="footer_community">
+                <a href=""><h4>Community</h4></a>
+                <a href=""><p>Events</p></a>
+                <a href=""><p>Blog</p></a>
+                <a href=""><p>Forum</p></a>
+             </div>
+             <div class="footer_cotact">
+                <a href=""><h4>Contact</h4></a>
+                <a href=""><p>Get In Touch</p></a>
+                <a href=""><p>Join Us</p></a>
+                <a href=""><p>Career Opportunities</p></a>
+                <a href=""><p>FAQ's</p></a>
+             </div>
+             <div class="footer_reach">
+                 <a href=""><h4>Reach US</h4></a>
+                 <div class="fc_email">
+                     <img src="./images/icon/email_Icon.jpg" alt="" id="fimg_icon">
+                     <div class="fc_info_con">
+                        <p>Email: <br><a href="">contact@gmail.com</a></p>
+                     </div>
+                     
+                 </div>
+                 <div class="fc_phno">
+                     <img src="./images/icon/Phone_icon.jpg" alt="" id="fimg_icon">
+                     <div class="fc_info_con">
+                        <p>Phone: <br><a href="">(414) 687 - 5892</a></p>
+                     </div>
+                    
+                 </div>
+             </div>
+        </div>
+        
+        <hr>
+        <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // Get the login button element
+        var loginBtn = document.getElementById("login_btn");
+
+        // Get the form container element
+        var formContainer = document.getElementById("form_container");
+
+        // Add click event listener to the login button
+        loginBtn.addEventListener("click", function() {
+            // Toggle the display of the form container
+            if (formContainer.style.display === "none") {
+                formContainer.style.display = "block";
+            } else {
+                formContainer.style.display = "none";
+            }
+        });
+        function closeForm() {
+            var formContainer = document.getElementById("form_container");
+            formContainer.style.display = "none";
+        }
+    </script>
+
+    
+    <script src="./JS/index.js"></script>
+</body>
+</html>

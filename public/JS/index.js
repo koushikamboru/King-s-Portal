@@ -29,3 +29,18 @@ function showSlides() {
     }
     setTimeout(showSlides, 6500); // Change slide every 6.5 seconds
 }
+
+
+//login buttton          
+var loginBtn = document.getElementById('login_btn');
+
+
+loginBtn.addEventListener('click', function() {
+
+  var loginPopup = window.open('login.html', 'loginPopup', 'width=600,height=400');
+  
+
+  if (loginPopup && !loginPopup.closed) {
+    loginPopup.focus();
+  }
+});
