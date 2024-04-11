@@ -139,14 +139,15 @@ ul li {
 /*--------------------------------------------------------------------------------------------*/
 
 /*Hero starts*/
-
+.hero_sec
+{
+    margin: 80px 167px 80px 167px ;
+}
 .hero
 {
     align-items: center;
     justify-content: center;
     display: flex;  
-    margin: 80px 167px 80px 167px ;
-    
 }
 .hero_cont
 {
@@ -217,17 +218,45 @@ ul li {
 /**/
 /**/
 
-/*--------------------------------------------------------------------------------------------*/
-/*Tech starts*/
+
+/*-------------------------------------------
+            Tech starts
+-------------------------------------------*/
 .tech_sec
 {
     background-color: #1b3a57;
-    margin: 0px 167px 24px 167px ;
+    margin: 0px 167px 14px 167px ;
     border-radius: 24px;
-    padding: 80px 0px 0px 0px ;
+    padding: 40px 0px 40px 0px ;
     text-align: center;
+   
 }
+.tech_sec_info
+{
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+.tech_sec button
+{
+    width: 129px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+}
+.tech_slide
+{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
 
+}
+.tech_slide img
+{
+    width: 250px;
+    height: 350px;
+    margin: 0px 24px;
+    overflow: hidden;
+}
 /*--------------------------------------------------------------------------------------------*/
 /*Academy starts*/
 
