@@ -7,23 +7,10 @@
     <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="./images/buss card match.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/buss card match.png">
+    
     <title>King's Portal</title>
-    <style>
-        /* CSS for form_container */
-        .form_container {
-            display: none; /* Initially hide the form */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            z-index: 9999;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-        }
-        
-    </style>
+
 </head>
 <body>
     <header>
@@ -35,7 +22,7 @@
     <nav>
         <div class="bg_nav">
             <div class="logo">
-                <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                <a href=""><img src="./assets/images/logo_full.jpg" id="logo_img"></a>
                 <a href=""><h1 id="logo_name"><span id="king"> KING'S </span><span id="portal">PORTAL</span></h1></a>
             </div>
             
@@ -57,25 +44,18 @@
     </nav>
 
     <div  class="form_container" id="form_container">
-        <span class="close-btn material-symbols-rounded " style="
-    z-index: 100;
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      color: #878484;
-      cursor: pointer;
-" onclick="closeForm()">close</span>
+        <span class="close-btn material-symbols-rounded " onclick="closeForm()">close</span>
         <input type="checkbox" id="flip">
         <div class="cover">
           <div class="front">
-            <img src="images/frontImg.jpg" alt="">
+            <img src="./assets/images/frontImg.jpg" alt="">
             <div class="front_text">
               <span class="front_text-1">Every connection is a story waiting to be continued.</span>
               <span class="front_text-2">Let's reconnect and keep writing our adventure together.</span>
             </div>
           </div>
           <div class="back">
-            <img class="backImg" src="images/backImg.jpg" alt="">
+            <img class="backImg" src="./assets/images/backImg.jpg" alt="">
             <div class="back_text">
               <span class="back_text-1">Good friend is a new adventure <br> Complete miles of journey <br> with one step</span>
               <span class="back_text-2">Let's get started</span>
@@ -147,7 +127,7 @@
         <div class="foot_info">
             <div class="foot_logo">
                 <div class="logo">
-                    <a href=""><img src="./images/logo_full.jpg" id="logo_img"></a>
+                    <a href=""><img src="./assets/images/logo_full.jpg" id="logo_img"></a>
                     <a href=""><h1 id="logo_name"><span id="king"> KING'S PORTAL</span></h1></a>
                 </div>
                 <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
@@ -200,14 +180,14 @@
              <div class="footer_reach">
                  <a href=""><h4>Reach US</h4></a>
                  <div class="fc_email">
-                     <img src="./images/icon/email_Icon.jpg" alt="" id="fimg_icon">
+                     <img src="./assets/icon/email_Icon.jpg" alt="" id="fimg_icon">
                      <div class="fc_info_con">
                         <p>Email: <br><a href="">contact@gmail.com</a></p>
                      </div>
                      
                  </div>
                  <div class="fc_phno">
-                     <img src="./images/icon/Phone_icon.jpg" alt="" id="fimg_icon">
+                     <img src="./assets/icon/Phone_icon.jpg" alt="" id="fimg_icon">
                      <div class="fc_info_con">
                         <p>Phone: <br><a href="">(414) 687 - 5892</a></p>
                      </div>
@@ -219,28 +199,7 @@
         <hr>
         <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
     </footer>
-    <script>
-        // Get the login button element
-        var loginBtn = document.getElementById("login_btn");
-
-        // Get the form container element
-        var formContainer = document.getElementById("form_container");
-
-        // Add click event listener to the login button
-        loginBtn.addEventListener("click", function() {
-            // Toggle the display of the form container
-            if (formContainer.style.display === "none") {
-                formContainer.style.display = "block";
-            } else {
-                formContainer.style.display = "none";
-            }
-        });
-        function closeForm() {
-            var formContainer = document.getElementById("form_container");
-            formContainer.style.display = "none";
-        }
-    </script>
-
+    <script src="./JS/login.js"></script>
     
     <script src="./JS/index.js"></script>
 </body>

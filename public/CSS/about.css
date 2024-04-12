@@ -1,143 +1,5 @@
-
-body
-{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: medium;
-    background-color: #112537;
-    color: rgb(255, 255, 255);
-    margin: 0%;
-}
-a
-{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-/*Header starts*/
-.promotion
-{
-    background-color: #e1f3fc28;   
-    display: flex;
-    align-items: center;
-    justify-content: space-around;  
-    color:#ffffff; 
-    font-style: bold;  
-}
-.promotion a
-{
-    color: #92cceb;  
-}
-.promotion a:hover
-{
-    color: #ffffff;  
-}
-/*Header ends*/
-
-
-/*Naviagtion Start*/
-nav
-{
-    background-color: #7cacf8;
-}
-.bg_nav
-{
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    margin: 0px 167px 0px 167px ;
-    color: black;
-}
-nav a
-{
-    color: black;
-    font-weight:600;
-}
-nav a:hover
-{
-    color: rgb(255, 255, 255);
-    font-weight:600;
-}
-ul
-{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-ul li {
-    margin: 0 14px; 
-}
-
-#logo_img
-{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
- 
-}
-.logo
-{
-    display: flex;
-    align-items: center;
-}
-#logo_name
-{
-    font-size: 34px;
-}
-#king
-{
-    margin-left: 6px;
-    color: white;
-}
-#portal
-{
-    color: #003399;
-}
-.nav_pages
-{
-    display: flex;
-    align-items: center;
-}#login_btn
-{
-    width: 74px;
-    height: 40px;
-    border-radius: 4px;
-    background-color: white;
-    color: #00a6ff;
-    border: none;
-    margin: 5px;
-}
-#signup_btn
-{
-    width: 74px;
-    height: 40px;
-    border-radius: 4px;
-    background-color: #30abee;
-    color: white;
-    border: none;
-    margin: 5px;
-}
-#login_btn:hover
-{
-    background-color: #30abee;
-    color: white;
-}
-   
-#signup_btn:hover
-{
-    background-color: white;
-    color: #00a6ff;
-}
-
-/*Naviagtion ends*/
-
-
-
-
-/*-------------------------------------------------------------------------*/
-
-
 /* About Us css start*/
 
-/**/
 .overview
 {
     background-color: #1b3a57;
@@ -146,8 +8,6 @@ ul li {
     border-radius: 24px;
     text-align: center;
 
- 
-
 }
 .over_head
 {
@@ -155,15 +15,21 @@ ul li {
     justify-content: space-around;
 
 }
-#as1
+.tit_abc
+{
+    font-size: 30px;
+}
+.desc_abu
+{
+    font-size: 26px;
+}
+.over_head img
 {
     width: 48px;
     height: 48px;
 }
 
-img#as1 {
-    border-radius: 50%;
-}
+
 .mission, .vision, .values {
     cursor: pointer;
    display: flex;
@@ -219,99 +85,102 @@ img#as1 {
 /*About Us css ends*/
 
 
-/*-------------------------------------------------------------------------*/
-
-
-
-/*footer starts*/
-footer
+/*--------------------------------------------------------------
+               Team members section
+----------------------------------------------------------------*/
+.abus_team_mem
 {
-    margin-top: 72px;
     background-color: #1b3a57;
-    margin: 0px 167px 0px 167px ;
+    margin: 24px 167px 24px 167px ;
+    padding: 80px 80px 80px 80px;
     border-radius: 24px;
-    padding: 25px;
-}
-.foot_info
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
     
 }
-#foot_logo_info
+.team_mem_cont
 {
-    width: 303.45px;
-    height: 36px;
-}
-
-.foot_subscribe_title {
-    width: 421px;
-    height: 78px;
-}
-
-.subscribe_input {
-    position: relative;
-    width: 421px;
-    height: 49px;
-    background-color: rgba(124, 172, 248, .08);
-    border-radius: 8px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center; 
+    margin: 22px;
 }
-
-#subscribe_input_placeholder {
+.team_mem_card 
+{
+    padding: 0px 24px 0px 24px;
+    width: 208px;
+    height: auto;
     background-color: transparent;
-    border: none;
-    color: white;
-    width: calc(100% - 83px); 
-    height: 49px;
-    padding-right: 90px; 
+    border: 1px solid #d3d3d3;
+    border-radius: 24px;
+}
+.team_mem_card p
+{
+    padding:12px 0px ;
+   text-align: end;
+   margin: 0%;
+}
+.tm_card
+{
+    padding: 24px 0px 32px 0px;
+}
+.tm_card img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 75px;
+    
 }
 
-.btn_subscribe {
-    position: absolute;
-    width: 83px;
-    height: 33px;
+.team_mem_card:hover {
+    background-color: #112537; 
+    border-color: white; 
     border: none;
-    border-radius: 4px;
-    background-color: white;
-    color: black; 
-    cursor: pointer;
-    margin: 10px; 
 }
-.btn_subscribe:hover
-{
-   background-color: #92cceb;
-   color: white;
-}
-.foot_references
+.tm_card_details
 {
     display: flex;
-    justify-content:space-between;
+    justify-content: end;
+    align-items: end;
+    padding-top: 24px;
 }
-.footer_reach
+.tm_card_details h1
 {
-    padding-bottom: 32px;
+    margin: 0%;
+    align-items: end;
+    text-align: left;
+   
 }
-.fc_email,.fc_phno
+.team_social
 {
     display: flex;
-    align-items: center;
-    padding-bottom: 32px;
+    justify-content: end;
+    align-items: end;
 }
-#fimg_icon
+.team_social img
 {
-    border-radius: 6px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    padding: 4px;
+    border-radius: 12px;
+   
 }
-.fc_info_con
+/*--------------------------------------------------------------
+                company collbration slide
+----------------------------------------------------------------*/
+.companystrip_sec
 {
-    padding-left: 16px;
-}
-#foot_copyright
-{
+    background-color: #1b3a57;
+    margin: 24px 167px 24px 167px ;
+    padding: 80px 80px 80px 80px;
+    border-radius: 24px;
     text-align: center;
 }
 
-/*footer ends*/
+.companystrip_sec img
+{
+    height: 100px;
+    width: 250px;
+}
+.left_cstrip_slide
+{
+    display: flex;
+}

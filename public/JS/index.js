@@ -31,16 +31,3 @@ function showSlides() {
 }
 
 
-//login buttton          
-var loginBtn = document.getElementById('login_btn');
-
-
-loginBtn.addEventListener('click', function() {
-
-  var loginPopup = window.open('login.html', 'loginPopup', 'width=600,height=400');
-  
-
-  if (loginPopup && !loginPopup.closed) {
-    loginPopup.focus();
-  }
-});
