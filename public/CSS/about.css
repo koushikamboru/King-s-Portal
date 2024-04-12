@@ -97,6 +97,17 @@
     text-align: center;
     
 }
+.team_mem_tit
+{
+    font-size: 34px;
+}
+.team_mem_desc
+{
+    font-size: 28px;
+    justify-content: center;
+    padding: 24px;
+}
+
 .team_mem_cont
 {
     display: flex;
@@ -163,24 +174,93 @@
     border-radius: 12px;
    
 }
+
+
+
+.team_mem_cont {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* 3 columns */
+    grid-gap: 24px; /* Gap between grid items */
+    justify-content: center; /* Centering the grid horizontally */
+}
+
+.team_mem_card {
+    padding: 0 24px;
+    width: 208px;
+    height: auto;
+    background-color: transparent;
+    border: 1px solid #d3d3d3;
+    border-radius: 24px;
+}
 /*--------------------------------------------------------------
                 company collbration slide
 ----------------------------------------------------------------*/
 .companystrip_sec
 {
+   justify-content: center;
     background-color: #1b3a57;
     margin: 24px 167px 24px 167px ;
     padding: 80px 80px 80px 80px;
     border-radius: 24px;
     text-align: center;
 }
-
-.companystrip_sec img
+.companystrip_sec h1
 {
+    font-size: 32px;
+}
+.companystrip_sec p
+{
+    font-size: 26px;
+    margin-bottom: 44px;
+}
+
+
+
+
+
+.slider2 {
+    background: #11253793;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider2::before,
+.slider2::after {
+    background: linear-gradient(to right,#1b3a57 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider2::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider2::before {
+    left: 0;
+    top: 0;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slide {
     height: 100px;
     width: 250px;
 }
-.left_cstrip_slide
-{
-    display: flex;
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
 }

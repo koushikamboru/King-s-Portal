@@ -1,21 +1,58 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, linkWithCredential, reauthenticateWithCredential, signInWithPopup, signInWithRedirect, getRedirectResult } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { EmailAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAaoHjRdvzRoRFSBKPp1ugdUsuqay8A4os",
-  authDomain: "king-s-portal-web.firebaseapp.com",
-  projectId: "king-s-portal-web",
-  storageBucket: "king-s-portal-web.appspot.com",
-  messagingSenderId: "882093763532",
-  appId: "1:882093763532:web:07a41c61528d1b126d8b69",
-  measurementId: "G-0KS31J6CFZ"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const auth = getAuth(app);
+
+const actionCodeSettings = {
+  url: 'https://www.example.com/finishSignUp?cartId=1234',
+  handleCodeInApp: true,
+  iOS: { bundleId: 'com.example.ios' },
+  android: { packageName: 'com.example.android', installApp: true, minimumVersion: '12' },
+  dynamicLinkDomain: 'example.page.link'
+};
+
+sendSignInLinkToEmail(auth, email, actionCodeSettings)
+  .then(() => { window.localStorage.setItem('emailForSignIn', email); })
+  .catch((error) => { /* Handle error */ });
+
+if (isSignInWithEmailLink(auth, window.location.href)) {
+  let email = window.localStorage.getItem('emailForSignIn');
+  if (!email) email = window.prompt('Please provide your email for confirmation');
+  signInWithEmailLink(auth, email, window.location.href)
+    .then((result) => { window.localStorage.removeItem('emailForSignIn'); })
+    .catch((error) => { /* Handle error */ });
+}
+
+const credential = EmailAuthProvider.credentialWithLink(email, window.location.href);
+linkWithCredential(auth.currentUser, credential)
+  .then((usercred) => { /* Success */ })
+  .catch((error) => { /* Handle error */ });
+
+reauthenticateWithCredential(auth.currentUser, credential)
+  .then((usercred) => { /* Success */ })
+  .catch((error) => { /* Handle error */ });
+
+const googleProvider = new GoogleAuthProvider();
+signInWithPopup(auth, googleProvider)
+  .then((result) => { /* Success */ })
+  .catch((error) => { /* Handle error */ });
+
+signInWithRedirect(auth, googleProvider);
+
+getRedirectResult(auth)
+  .then((result) => { /* Success */ })
+  .catch((error) => { /* Handle error */ });

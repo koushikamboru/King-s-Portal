@@ -71,11 +71,11 @@
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input type="email" id="email" placeholder="emailid@gmail.com" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" placeholder="Enter your password" required>
                   </div>
                   <div class="text"><a href="#">Forgot password?</a></div>
                   <div class="button input-box">
@@ -123,84 +123,14 @@
           </div>
         </div>
       </div>
-    <footer>
-        <div class="foot_info">
-            <div class="foot_logo">
-                <div class="logo">
-                    <a href=""><img src="./assets/images/logo_full.jpg" id="logo_img"></a>
-                    <a href=""><h1 id="logo_name"><span id="king"> KING'S PORTAL</span></h1></a>
-                </div>
-                <p id="foot_logo_info">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma</p>
-            </div>
-
-            <div class="foot_subscribe_title">
-                <h2>Subscribe to our newsletter</h2>
-                <div class="subscribe_input">
-                    <input type="email" placeholder="Enter your email address" id="subscribe_input_placeholder">
-                    <button class="btn_subscribe">Subscribe</button>
-                </div>
-            </div>
-           
-        </div>
-        
-        
-        <hr>
-        <div class="foot_references">
-            <div class="footer_aboutus">
-                <a href="about.html"><h4>About Us</h4></a>
-                <a href=""><p>Mission</p></a>
-                <a href=""><p>Our team</p></a>
-                <a href=""><p>Portfolio</p></a>
-                <a href=""><p>Testimonials</p></a>
-                <a href=""><p>Privacy policy</p></a>
-             </div>
-             
-             <div class="footer_divisions">
-                <a href=""><h4>Divisions</h4></a>
-                <a href=""><p>Academy</p></a>
-                <a href=""><p>Career</p></a>
-                <a href=""><p>Tech</p></a>
-                <a href=""><p>Innovations</p></a>
-                <a href=""><p>Products</p></a>
-             </div>
-             
-             <div class="footer_community">
-                <a href=""><h4>Community</h4></a>
-                <a href=""><p>Events</p></a>
-                <a href=""><p>Blog</p></a>
-                <a href=""><p>Forum</p></a>
-             </div>
-             <div class="footer_cotact">
-                <a href=""><h4>Contact</h4></a>
-                <a href=""><p>Get In Touch</p></a>
-                <a href=""><p>Join Us</p></a>
-                <a href=""><p>Career Opportunities</p></a>
-                <a href=""><p>FAQ's</p></a>
-             </div>
-             <div class="footer_reach">
-                 <a href=""><h4>Reach US</h4></a>
-                 <div class="fc_email">
-                     <img src="./assets/icon/email_Icon.jpg" alt="" id="fimg_icon">
-                     <div class="fc_info_con">
-                        <p>Email: <br><a href="">contact@gmail.com</a></p>
-                     </div>
-                     
-                 </div>
-                 <div class="fc_phno">
-                     <img src="./assets/icon/Phone_icon.jpg" alt="" id="fimg_icon">
-                     <div class="fc_info_con">
-                        <p>Phone: <br><a href="">(414) 687 - 5892</a></p>
-                     </div>
-                    
-                 </div>
-             </div>
-        </div>
-        
-        <hr>
-        <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
-    </footer>
+   
     <script src="./JS/login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js"></script>
+<script src="./JS/firebaseConfig.js"></script>
+
     
-    <script src="./JS/index.js"></script>
+ 
 </body>
 </html>

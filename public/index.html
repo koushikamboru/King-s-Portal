@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
-   
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/buss card match.png">
     <title>King's Portal</title>
 </head>
@@ -26,9 +28,9 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="">Divisions</a></li>
-                    <li><a href="">Community</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="./divisions.html">Divisions</a></li>
+                    <li><a href="./community.html">Community</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>    
             </div>          
             <div class="nav_user">
@@ -37,6 +39,87 @@
             </div>
         </div>
     </nav>
+    <div  class="form_container" id="form_container">
+        <span class="close-btn material-symbols-rounded " onclick="closeForm()">close</span>
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <img src="./assets/images/frontImg.jpg" alt="">
+            <div class="front_text">
+              <span class="front_text-1">Every connection is a story waiting to be continued.</span>
+              <span class="front_text-2">Let's reconnect and keep writing our adventure together.</span>
+            </div>
+          </div>
+          <div class="back">
+            <img class="backImg" src="./assets/images/backImg.jpg" alt="">
+            <div class="back_text">
+              <span class="back_text-1">Good friend is a new adventure <br> Complete miles of journey <br> with one step</span>
+              <span class="back_text-2">Let's get started</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="forms">
+          <div class="form-content">
+            <div class="login-form form">
+              <div class="title">Login</div>
+              <form action="#">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit">
+                  </div>
+                  <div class="text_option">Or</div>
+                  <div class="button_google">
+                    <img src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="" id="google_icon">
+                    <input type="button" value="Login with Google">
+                  </div>
+                  <div class="text sign-up-text">Don't have an account? <label for="flip">Sign up now</label></div>
+                  
+                </div>
+              </form>
+            </div>
+            <div class="signup-form form">
+              <div class="title">Signup</div>
+              <form action="#">
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter your name" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Enter your email" required>
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit">
+                  </div>
+                  <div class="text_option">Or</div>
+                  <div class="button_google">
+                    <img src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="" id="google_icon">
+                    <input type="button" value="Sign up with Google">
+                  </div>
+                  <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+               
+                </div>
+              </form>
+             ]
+            </div>
+          </div>
+        </div>
+      </div>
     <section class="hero_sec">
         <div class="hero" >
             <div class="hero_cont">
@@ -218,7 +301,7 @@
         <hr>
         <p id="foot_copyright">Copyright © 2024 KING'S PORTAL | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
     </footer>
-    
+    <script src="./JS/login.js"></script>
     <script src="./JS/index.js"></script>
 </body>
 </html>

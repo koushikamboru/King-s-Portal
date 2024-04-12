@@ -1,6 +1,6 @@
 body {
     align-items: center;
-    background: #E3E3E3;
+  
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -9,17 +9,15 @@ body {
 .slider {
     background: white;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-    height: 100px;
-    margin: auto;
+    margin: 0px 167px;
     overflow: hidden;
     position: relative;
-    width: 960px;
+   
 }
 
 .slider::before,
 .slider::after {
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
     height: 100px;
     position: absolute;
     width: 200px;
@@ -38,17 +36,47 @@ body {
 }
 
 .slide-track {
-    animation: scroll 40s linear infinite;
+ 
     display: flex;
-    width: calc(250px * 7);
+    flex-wrap: wrap; 
+    gap: 10px; 
+    width: calc(250px * 4); 
 }
 
 .slide {
+    flex: 0 0 calc(25% - 10px); /* 4 columns with gap */
+    position: relative;
     height: 100px;
     width: 250px;
 }
 
+.slide img {
+    height: 100%;
+    width: 100%;
+}
+
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 3.5)); }
+    100% { transform: translateX(calc(-250px * 3 - 10px * 3)); }
+}
+
+.companystrip_sec {
+    background-color: #1b3a57;
+    margin: 24px 167px 24px 167px ;
+    padding: 80px 80px 80px 80px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.companystrip_sec img {
+    height: 100px;
+    width: 250px;
+}
+
+.left_cstrip_slide {
+    display: flex;
+}
+
+.right_cstrip_slide {
+    display: flex;
 }
