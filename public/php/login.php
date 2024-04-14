@@ -1,31 +1,33 @@
 <?php
-session_start();
+// Connect to MySQL database
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "user_authentication";
 
-// Include your database connection file
-include 'db_connection.php';
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Get form data
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve form data
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// Retrieve user data from the database based on email
+// Retrieve user data from database
 $sql = "SELECT * FROM users WHERE email='$email'";
 $result = $conn->query($sql);
 
-if ($result->num_rows == 1) {
-    // Verify the password
+if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     if (password_verify($password, $row['password'])) {
-        // Password is correct, set session variables and redirect to dashboard or another page
-        $_SESSION['email'] = $email;
-        // Redirect to dashboard or another page
-        header("Location: dashboard.php");
+        echo "Login successful";
     } else {
-        // Password is incorrect
-        echo "Invalid email or password";
+        echo "Invalid password";
     }
 } else {
-    // User with provided email does not exist
     echo "User not found";
 }
 

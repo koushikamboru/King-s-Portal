@@ -1,17 +1,25 @@
 <?php
-// Include your database connection file
-include 'db_connection.php';
+// Connect to MySQL database
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "user_authentication";
 
-// Get form data
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Retrieve form data
 $name = $_POST['name'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-// Encrypt the password before storing it in the database (you should use a more secure method)
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+// Prepare and execute SQL statement to insert user data
+$sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
-// Insert user data into the database
-$sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$hashed_password')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
