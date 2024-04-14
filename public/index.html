@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./CSS/head_foot.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./assets/images/buss card match.png">
@@ -30,7 +31,7 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="./divisions.html">Divisions</a></li>
                     <li><a href="./community.html">Community</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./404.html">Contact</a></li>
                 </ul>    
             </div>          
             <div class="nav_user">
@@ -63,7 +64,7 @@
           <div class="form-content">
             <div class="login-form form">
               <div class="title">Login</div>
-              <form action="#">
+              <form action="./php/login.php" method="post">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
@@ -89,7 +90,7 @@
             </div>
             <div class="signup-form form">
               <div class="title">Signup</div>
-              <form action="#">
+              <form action="./php/signup.php" method="post">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-user"></i>
@@ -200,14 +201,55 @@
             <h1>ACADEMY</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam.</p>
         </div>
-        <div>
-            <div class="courses"></div>
-            <div class="workshops"></div>
-            <div class="resources"></div>
+        <div class="expanddays_sec">
+                <div class="options">
+
+                  <div class="option" style="--optionBackground:url(https://blogassets.leverageedu.com/blog/wp-content/uploads/2019/10/23170101/List-of-Professional-Courses-after-Graduation.gif);">
+                     <div class="shadow"></div>
+                     <div class="label">
+                        <div class="info">
+                           <div class="main">COURSES</div>
+                           <div class="sub"> Web Design</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="option" style="--optionBackground:url(https://www.picochip.com/wp-content/uploads/Tech-Workshop-e1562069521579.jpg);">
+                     <div class="shadow"></div>
+                     <div class="label">
+                        <div class="info">
+                           <div class="main">WORKSHOPS</div>
+                           <div class="sub"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="option active" style="--optionBackground:url(https://www.tlpnyc.com/hubfs/Stock%20images/Resources%20written%20in%20search%20bar%20on%20virtual%20screen.jpeg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+
+                       <div class="info">
+                          <div class="main">resources</div>
+                          <div class="sub"></div>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+               <div class="courses"></div>
+               <div class="workshops"></div>
+               <div class="resources"></div>
+               
+               
+          
+               <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+               <script>
+                  $(".option").click(function(){
+                      $(".option").removeClass("active");
+                      $(this).addClass("active");
+                  });
+               </script>
         </div>
     </section>
 
-    <section class="career_sec">
+  <!-- <section class="career_sec">
         <div>
             <h1>CAREER</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam.</p>
@@ -223,7 +265,7 @@
             <h1>Forge the Code</h1>
             <p>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar elemen tempus hac dolor sit amet lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar amet consecte tur adipiscip.</p>
         </div>
-    </section>
+    </section>--> 
 
     <footer>
         <div class="foot_info">
